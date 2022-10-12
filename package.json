@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "web-ext lint -s src",
     "test": "npm run lint",
-    "build": "web-ext build -s src -a dist"
+    "build": "web-ext build -s src -a dist --overwrite-dest"
   },
   "repository": {
       "type": "git",
