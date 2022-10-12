@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "No search engine",
+    "description": "Adds a 'search engine' that does nothing to prevent privacy leaks when using the address bar. All searches using this search engine route to 'search.invalid'.",
+    "version": "0.0.1",
+    "icons": {
+        "48": "icon-48.png",
+        "96": "icon-96.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "strict_min_version": "65.0.0"
+        }
+    },
+    "chrome_settings_overrides": {
+        "search_provider": {
+            "name": "No Search",
+            "search_url": "https://search.invalid",
+            "suggest_url": "https://search.invalid",
+            "is_default": true,
+            "favicon_url": "favicon.ico",
+            "encoding": "UTF-8"
+        }
+    }
+}
