@@ -48,8 +48,10 @@ jobs:
         with:
           name: dist
       -
+        run: ls no_search_engine-*.zip
+      -
         name: 'Create release'
         uses: softprops/action-gh-release@v2.3.2
         with:
-          files: "dist/no_search_engine-*.zip"
+          files: "no_search_engine-*.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
