@@ -31,6 +31,7 @@ jobs:
         name: 'Archive artifacts'
         uses: actions/upload-artifact@v4
         with:
+          name: dist
           path: dist/no_search_engine-*.zip
           if-no-files-found: error
           overwrite: true
@@ -45,10 +46,10 @@ jobs:
         name: 'Download artifacts'
         uses: actions/download-artifact@v4
         with:
-          pattern: no_search_engine-*.zip
+          name: dist
       -
         name: 'Create release'
         uses: softprops/action-gh-release@v2.3.2
         with:
-          files: "no_search_engine-*.zip"
+          files: "dist/no_search_engine-*.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
